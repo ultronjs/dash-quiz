@@ -1,3 +1,15 @@
+@import url("https://dash-css.netlify.app/css/style.css");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+:root{
+  --primary-color:#E50914;
+  --primary-black:#171200;
+  --input-background:#333333;
+  --primary-white:#FFFFFF;
+  --primary-grey:#7C8083;
+  --primary-background:#0E131F;
+  --primary-card-background:#19212C
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +22,42 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.dashboard_container{
+  min-height: 100vh;
+  background-color: var(--primary-background);
+  padding: 3rem;
+  display: grid;
+  gap:0.5rem;
+  grid-template-columns:repeat( auto-fit, minmax(18rem, 1fr) );
+}
+/*Navigation Custom CSS*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-card-background);
+    color:var(--white);
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.img_logo{
+    height: 3.125rem;
+    width: 12.5rem;
+}
+/*Custom size of icon for the nav bar*/
+.link_wrapper{
+    text-decoration: none;
+    color: inherit;
+}
+.card{
+  cursor: pointer;
+}
+.container{
+  background-color: var(--primary-background);
+  color:var(--white);
 }
