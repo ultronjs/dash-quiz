@@ -7,10 +7,14 @@ import NavBar from "../components/NavBar";
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login } = useAuth();
+  const { login, loginWithGuestCreds } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const guestCreds = {
+    email: "test@gmail.com",
+    password: 123456,
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -20,13 +24,26 @@ export default function Login() {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       navigate("/");
-    } catch {
+    } catch(error) {
       console.log(error)
       setError("Failed to log in");
     }
 
     setLoading(false);
   }
+
+    async function handleGuestLogin(e) {
+      try {
+        setError("");
+        setLoading(true);
+        await loginWithGuestCreds(guestCreds.email,guestCreds.password)
+        navigate("/");
+      } catch(error) {
+        console.log(error);
+        setError("Failed to log in");
+      }
+      setLoading(false);
+    }
 
   return (
     <>
@@ -35,7 +52,7 @@ export default function Login() {
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh", minWidth: "100vw" }}
       >
-        <div className="w-100" style={{ maxWidth: "400px" }}>
+        <div className="w-100" style={{ maxWidth: "400px" ,height:"fit-content"}}>
           <Card
             style={{
               color: "white",
@@ -61,6 +78,13 @@ export default function Login() {
               <div className="w-100 text-center mt-3">
                 <Link to="/forgot-password">Forgot Password?</Link>
               </div>
+              <Button
+                disabled={loading}
+                className="w-100 mt-4"
+                onClick={() => handleGuestLogin()}
+              >
+                Log In With Guest Creds
+              </Button>
             </Card.Body>
           </Card>
           <div className="w-100 text-center mt-2">
