@@ -3,5 +3,5 @@ import { useAuth } from "../contexts/AuthContext";
 
 export const RequireAuth = ({ children }) => {
   const { currentUser } = useAuth()
-  return currentUser ? children : <Navigate to="/login" replace />;
+  return currentUser !== null ? children : <Navigate to="/login" replace />;
 };

@@ -1,3 +1,121 @@
-.App{
-  
+.quiz-score,
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  color: #fff;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  font-size: 36px;
+}
+
+.question-count,.score {
+  padding-left: 10px;
+  color: #8b95bd;
+  margin-bottom: 30px;
+}
+
+.question-count span,.score span {
+  font-size: 28px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.answer-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 50%;
+}
+.scorecard-option-list{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.answer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.answer-item-btn,.score-card-button {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+}
+.score-card-button{
+  cursor: default;
+}
+
+.answer-item-btn:hover {
+  background-color: #555e7d;
+  cursor: pointer;
+}
+
+.play-again-wrapper,
+.next-question-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+.play-again-wrapper button,
+.next-question-wrapper button {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: #63b0e8;
+  color: white;
+  border: 5px solid #0383e0;
+  padding: 5px 30px 5px 30px;
+  font-size: 25px;
+}
+
+.play-again-wrapper button:hover,
+.next-question-wrapper button:hover {
+  cursor: pointer;
+  background-color: #0a63a3;
+}
+
+.answer-item-circle {
+  font-size: 26px;
+  padding: 5px;
+}
+
+.answer-item-btn:focus {
+  outline: none;
+}
+
+.quiz-score {
+  text-align: center;
+}
+
+.timer-wrapper {
+  background: #dedede;
+  height: 15px;
+  border-radius: 20px;
+  margin: 10px;
+  width: 60%;
+}
+
+.timer-countdown-bar {
+  background: #ffad55;
+  height: 15px;
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
 }

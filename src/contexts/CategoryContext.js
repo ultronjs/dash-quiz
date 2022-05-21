@@ -23,7 +23,7 @@ export const CategoryProvider = ({ children }) => {
 
   return (
     <CategoryContext.Provider value={value}>
-      {currentUser && children}
+      {children}
     </CategoryContext.Provider>
   );
 }

@@ -34,6 +34,9 @@ export function AuthProvider({ children }) {
   function updatePassword(password) {
     return currentUser.updatePassword(password);
   }
+  function loginWithGuestCreds(email,password){
+    return auth.signInWithEmailAndPassword(email, password);
+  }
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -52,6 +55,7 @@ export function AuthProvider({ children }) {
     resetPassword,
     updateEmail,
     updatePassword,
+    loginWithGuestCreds,
   };
 
   return (
