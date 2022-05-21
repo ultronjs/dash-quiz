@@ -32,7 +32,7 @@ export default function Dashboard() {
                   color: "white",
                   backgroundColor: "#19212C",
                 }}
-                onClick={() => navigate(`/quiz/${item.category.name}`)}
+                onClick={() => navigate(`/rules/${item.category.name}`)}
               >
                 <Card.Img
                   style={{

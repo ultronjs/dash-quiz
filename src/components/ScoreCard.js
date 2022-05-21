@@ -4,7 +4,6 @@ import {Alert} from "react-bootstrap"
 import "../App.css"
 
 function ScoreCard({questionsBank,saveSubmitAnswer}) {
-  console.log(questionsBank,saveSubmitAnswer)
   return (
     <div>
       {questionsBank.map((item, itemIndex) => (

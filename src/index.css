@@ -80,3 +80,24 @@ code {
   display: flex;
   justify-content: space-evenly;
 }
+.rules_container{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rules-list{
+  font-size: 30px;
+}
+.btn_center{
+  display: flex;
+  justify-content: center;
+}
+
+.btn_rules{
+  width:80%;
+}
+.not_found_image{
+  height: 40%;
+  width: 50%;
+}
